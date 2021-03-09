@@ -1,0 +1,27 @@
+package q;
+
+import java.util.Scanner;
+
+public class vendingMachine {
+	public static void main(String[] args) {
+		// 驼峰法命名
+		float Dollars;
+		float dollars;
+		float coins;
+		int num;
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("请输入投入的美元:");
+		Dollars = scan.nextFloat();
+
+		num = (int) Math.floor(Dollars);
+		if (num % 2 == 0) {
+			System.out.println("1美元是数量为" + 0);
+			System.out.println("2美元的数量为" + (num / 2));
+		} else {
+			System.out.println("1美元是数量为" + 1);
+			System.out.println("2美元的数量为" + ((num - 1) / 2));
+		}
+	}
+}
